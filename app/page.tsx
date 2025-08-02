@@ -114,7 +114,7 @@ function ShootingStar({
       {trailPositions && (
         <points ref={trailRef}>
           <bufferGeometry>
-            <bufferAttribute attach="attributes-position" array={trailPositions} count={10} itemSize={3} />
+            <bufferAttribute attach="attributes-position" args={[trailPositions, 3]} />
           </bufferGeometry>
           <pointsMaterial color="#3b82f6" size={0.01} transparent opacity={0.6} sizeAttenuation />
         </points>
